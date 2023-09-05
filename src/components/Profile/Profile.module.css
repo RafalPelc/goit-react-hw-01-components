@@ -41,7 +41,9 @@ p {
 .stats {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
   padding: 10px;
   background-color: #ffffff;
 }
