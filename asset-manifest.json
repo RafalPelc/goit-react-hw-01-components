@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/RafalPelc/goit-react-hw-01-components/static/css/main.c294ae2f.css",
-    "main.js": "/RafalPelc/goit-react-hw-01-components/static/js/main.e9851c3b.js",
-    "index.html": "/RafalPelc/goit-react-hw-01-components/index.html",
-    "main.c294ae2f.css.map": "/RafalPelc/goit-react-hw-01-components/static/css/main.c294ae2f.css.map",
-    "main.e9851c3b.js.map": "/RafalPelc/goit-react-hw-01-components/static/js/main.e9851c3b.js.map"
+    "main.css": "/goit-react-hw-01-components/static/css/main.c294ae2f.css",
+    "main.js": "/goit-react-hw-01-components/static/js/main.fec9d810.js",
+    "index.html": "/goit-react-hw-01-components/index.html",
+    "main.c294ae2f.css.map": "/goit-react-hw-01-components/static/css/main.c294ae2f.css.map",
+    "main.fec9d810.js.map": "/goit-react-hw-01-components/static/js/main.fec9d810.js.map"
   },
   "entrypoints": [
     "static/css/main.c294ae2f.css",
-    "static/js/main.e9851c3b.js"
+    "static/js/main.fec9d810.js"
   ]
 }
