@@ -1,35 +1,29 @@
-import propTypes from 'prop-types';
-import css from './Profile.module.css';
+import PropTypes from 'prop-types';
+import style from './Profile.module.css';
 
-export const Profile = ({
-  username,
-  tag,
-  location,
-  avatar,
-  followers,
-  views,
-  likes,
-}) => {
+export const Profile = ({ username, tag, location, avatar, stats }) => {
+  const { followers, views, likes } = stats;
   return (
-    <div className={css.profile}>
-      <div className={css.description}>
-        <img src={avatar} alt={username} className={css.avatar} width="100" />
-        <p className={css.name}>{username}</p>
-        <p className={css.tag}>{tag}</p>
-        <p className={css.location}>{location}</p>
+    <div className={style.profile}>
+      <div className={style.description}>
+        <img src={avatar} alt="User avatar" className={style.avatar} />
+        <p className={style.name}>{username}</p>
+        <p className={style.tag}>@{tag}</p>
+        <p className={style.location}>{location}</p>
       </div>
-      <ul className={css.stats}>
-        <li className={css.item}>
-          <span className={css.label}>Followers</span>
-          <span className={css.quantity}>{followers}</span>
+
+      <ul className={style.stats}>
+        <li>
+          <span className={style.label}>Followers</span>
+          <span className={style.quantity}>{followers}</span>
         </li>
-        <li className={css.item}>
-          <span className={css.label}>Views</span>
-          <span className={css.quantity}>{views}</span>
+        <li>
+          <span className={style.label}>Views</span>
+          <span className={style.quantity}>{views}</span>
         </li>
-        <li className={css.item}>
-          <span className={css.label}>Likes</span>
-          <span className={css.quantity}>{likes}</span>
+        <li>
+          <span className={style.label}>Likes</span>
+          <span className={style.quantity}>{likes}</span>
         </li>
       </ul>
     </div>
@@ -37,12 +31,13 @@ export const Profile = ({
 };
 
 Profile.propTypes = {
-  username: propTypes.string.isRequired,
-  tag: propTypes.string.isRequired,
-  location: propTypes.string.isRequired,
-  avatar: propTypes.string.isRequired,
-  stats: propTypes.exact({
-    label: propTypes.string.isRequired,
-    quantity: propTypes.number.isRequired,
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  stats: PropTypes.shape({
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
   }),
 };
